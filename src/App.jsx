@@ -9,6 +9,8 @@ function App() {
   const [num1, setNum1] = useState(""); // num1 will store the value from the first input field
   const [num2, setNum2] = useState(""); // num2 will store the value from the second input field
 
+  const [result, setResult] = useState(null); // Initially null means no result yet
+
   const calculate = (operator) => {
     // Convert the string inputs into numbers
     const number1 = parseFloat(num1); // parseFloat converts string -> decimal number
@@ -71,13 +73,13 @@ function App() {
 
       <div>
         <button onClick={()=> calculate("+")}>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
+        <button onClick={()=> calculate("-")}>-</button>
+        <button onClick={()=> calculate("*")}>*</button>
+        <button onClick={()=> calculate("/")}>/</button>
       </div>
 
-      {/* Display result */}
-        <h2>Result: </h2>
+      {/* Displaying result */}
+        <h2>Result: {result !== null ? result : "—"}</h2>
     </div>
 
   );

@@ -42,7 +42,7 @@ function App() {
         // Check if the second number is zero to avoid dividing by zero
         if (number2 === 0) 
           {
-            calcResult = "Cannot divide by zero";
+            calcResult = "Cannot be divided by zero";
           } 
         else 
           {
@@ -50,7 +50,7 @@ function App() {
           }
     }
 
-    // Update the result state with the calculated value
+    // Updating the result state with the calculated value
     setResult(calcResult);
 
     
@@ -61,14 +61,14 @@ function App() {
       <h1>Boiler Room - Simple Calculator</h1>
       {/* Input field for number 1 */}
       <input  type="number" 
-              value={num1}               // connect state num1 with the input
-              onChange={(e) => setNum1(e.target.value)} // update num1 state when user types
+              value={num1}               // connects state num1 with the input
+              onChange={(e) => setNum1(e.target.value)} // updates num1 state when user types new number
       />
 
       {/* Input field for number 2 */}
       <input  type="number" 
-        value={num2}               // connect state num1 with the input
-        onChange={(e) => setNum2(e.target.value)} // update num1 state when user types
+        value={num2}               // connects state num1 with the input
+        onChange={(e) => setNum2(e.target.value)} // updates num1 state when user types new number
       />
 
       <div>
